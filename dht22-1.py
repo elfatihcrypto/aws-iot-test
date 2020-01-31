@@ -22,7 +22,7 @@ while 1:
     current_time = timestamp.strftime("%H" ":" "%M" ":" "%S")
  
     humidity, temperature = Adafruit_DHT.read_retry(sensor_name, sensor_pin)
-  	temp1 = '{0:0.2f}*C'.format(temperature, humidity)
+    temp1 = '{0:0.2f}*C'.format(temperature, humidity)
     humid1 = '{1:0.2f}%'.format(temperature, humidity)
 
     payload = '{ "timestamp": "' + current_time + '","temperature": ' + str(temp1) + ',"humidity": '+ str(humid1) + ' }'
