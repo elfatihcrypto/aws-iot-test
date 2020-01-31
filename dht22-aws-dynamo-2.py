@@ -77,7 +77,7 @@ def main():
 
     threading.Timer(interval=10, function=main).start()
     obj = MyDb()
-    Temperature , Humidity = obj.sensor_value()
+    Temp1 , Humid1 = obj.sensor_value()
     obj.put(Sensor_Id=str(counter), Temperature=str(Temp1), Humidity=str(Humid1))
     counter = counter + 1
     print("Uploaded Sample on Cloud")
