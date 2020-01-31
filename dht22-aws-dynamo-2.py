@@ -62,7 +62,7 @@ class MyDb(object):
         humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
        
         if humidity is not None and temperature is not None:
-            print('Temp={0:0.2f}*C  Humidity={1:0.2f}%'.format(temperature, humidity))
+            print('Temperature={0:0.2f}*C  Humidity={1:0.2f}%'.format(temperature, humidity))
             Temp1 = '{0:0.2f}*C'.format(temperature, humidity)
             Humid1 = '{1:0.2f}%'.format(temperature, humidity)
         else:
@@ -79,7 +79,8 @@ def main():
     obj.put(Sensor_Id=str(counter), Temperature=str(Temp1), Humidity=str(Humid1))
     counter = counter + 1
     #print("Uploaded to AWS Cloud")
-    print("Temperature and Humidity are Successfully Uploaded to AWS Cloud")
+    print("Successfully uploaded to AWS Cloud")
+    print("~~~~~~~~~~~~ waiting 10 Seconds ~~~~~~~~~~~~")
 
 
 if __name__ == "__main__":
