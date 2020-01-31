@@ -65,8 +65,6 @@ class MyDb(object):
             print('Temp={0:0.2f}*C  Humidity={1:0.2f}%'.format(temperature, humidity))
             Temp1 = '{0:0.2f}*C'.format(temperature, humidity)
             Humid1 = '{1:0.2f}%'.format(temperature, humidity)
-            print(Temp1)
-            print(Humid1)
         else:
             print('Failed to get reading. Try again!')
         return Temp1, Humid1
@@ -80,8 +78,8 @@ def main():
     Temp1 , Humid1 = obj.sensor_value()
     obj.put(Sensor_Id=str(counter), Temperature=str(Temp1), Humidity=str(Humid1))
     counter = counter + 1
-    print("Uploaded Sample on Cloud")
-    #print("Temp and Humidity are uploaded to AWS Cloud")
+    #print("Uploaded to AWS Cloud")
+    print("Temperature and Humidity are Successfully Uploaded to AWS Cloud")
 
 
 if __name__ == "__main__":
