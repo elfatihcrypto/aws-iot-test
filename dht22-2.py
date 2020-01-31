@@ -19,7 +19,7 @@ while 1:
     temp1 = '{0:0.2f}*C'.format(temperature, humidity)
     humid1 = '{1:0.2f}%'.format(temperature, humidity)
 
-    # payload = '{ "timestamp": "' + current_time + '","temperature": ' + str(temp1) + ',"humidity": '+ str(humid1) + ' }'
+    # payload = '{ "timestamp: "' + current_time + '","temperature: ' + str(temp1) + ',"humidity: '+ str(humid1) + ' }'
     print ("Date": "' + current_date)
     print ("Time": "' + current_time)
     print ("Temperature": "' + str(temp1))
