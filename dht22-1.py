@@ -8,14 +8,8 @@ timestamp = datetime.datetime.now()
 current_date = timestamp.strftime("%d" "-" "%m" "-" "%Y")
 current_time = timestamp.strftime("%H" ":" "%M" ":" "%S")
 
-print (timestamp)
-print (current_date)
-print (current_time)
-
-
 sensor_name = Adafruit_DHT.DHT22
 sensor_pin = 23
-
 
 while 1:
     timestamp = datetime.datetime.now()
@@ -27,6 +21,9 @@ while 1:
 
     payload = '{ "timestamp": "' + current_time + '","temperature": ' + str(temp1) + ',"humidity": '+ str(humid1) + ' }'
 
+    print (current_date)
+    print (current_time)
     print payload
-    
+    print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print (" ")
     time.sleep(2)
